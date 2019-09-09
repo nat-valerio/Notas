@@ -3,10 +3,10 @@
     <string name="nota1">Nota 1</string>
     <string name="nota2">Nota 2</string>
     <string name="nota3">Nota 3</string>
-    <string name="digite_nota"></string>
     <string name="calcular_nota">Calcular nota</string>
     <string name="info_nota">Informações</string>
     <string name="btn_calcular">Calcular</string>
     <string name="btn_informacao">Informações</string>
+    <string name="resultado">Resultado</string>
 
 </resources>

@@ -62,4 +62,24 @@ public class MainActivity extends AppCompatActivity {
             );
         }
     }
+
+    public void chamaInfo(){
+        Intent intent = new Intent(this, InfoActivity.class);
+
+        double n1 = Double.parseDouble(editTextNota1.getText().toString());
+        double n2 = Double.parseDouble(editTextNota2.getText().toString());
+        double n3 = Double.parseDouble(editTextNota3.getText().toString());
+
+
+
+        if(n1 > n2){
+            intent.putExtra("Sua maior nota é: ", "n1");
+        }
+
+
+
+
+        startActivity(intent);
+
+    }
 }
