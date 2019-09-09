@@ -62,17 +62,4 @@ public class MainActivity extends AppCompatActivity {
             );
         }
     }
-
-    /*public void trocaInfoActivity (View v){
-        Intent intent = new Intent(this, InfoActivity.class);
-
-        int n1 = Double.parseDouble(editTextNota1.getText().toString());
-        int n2 = Double.parseDouble(editTextNota2.getText().toString());
-        int n3 = Double.parseDouble(editTextNota3.getText().toString());
-
-        double max = Math.max();
-        //double min = Math.min(n1 && n2 && n3);
-
-        startActivity(intent);
-    }*/
 }
