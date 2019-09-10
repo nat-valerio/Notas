@@ -72,27 +72,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chamaInfo(View v){
-        Intent intent = new Intent(this, InfoActivity.class);
 
         double n1 = Double.parseDouble(editTextNota1.getText().toString());
         double n2 = Double.parseDouble(editTextNota2.getText().toString());
         double n3 = Double.parseDouble(editTextNota3.getText().toString());
 
         if(n1 > n2 && n1 > n3){
-            textViewNotaMenor.setText("Nota mais baixa: " + n1);
-        }
-        else if (n2 > n3){
-            textViewNotaMenor.setText("Nota mais baixa:" + n2);
-        }
-
-        if(n1 < n2 && n1 < n3){
             textViewNotaMaior.setText("Nota mais alta: " + n1);
         }
-        else if (n2 < n3){
-            textViewNotaMaior.setText("Nota mais alta: " + n2);
+        else if (n2 > n3){
+            textViewNotaMaior.setText("Nota mais alta:" + n2);
         }
 
-        startActivity(intent);
+        if (n1 < n2 && n1 < n3){
+            textViewNotaMenor.setText("Nota mais baixa: " + n1);
+        }
+        else if (n2 < n3){
+            textViewNotaMenor.setText("Nota mais baixa: " + n2);
+        }
 
     }
 }
