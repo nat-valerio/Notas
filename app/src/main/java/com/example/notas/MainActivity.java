@@ -14,8 +14,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextNota1;
     private EditText editTextNota2;
     private EditText editTextNota3;
-    private TextView textViewStatus;
+    private TextView textViewNotaMaior;
+    private TextView textViewNotaMenor;
     private TextView textViewMedia;
+    private TextView textViewStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
         editTextNota1 = findViewById(R.id.edit_text_nota1);
         editTextNota2 = findViewById(R.id.edit_text_nota2);
         editTextNota3 = findViewById(R.id.edit_text_nota3);
-        textViewStatus = findViewById(R.id.text_view_status);
+
+        textViewNotaMaior = findViewById(R.id.text_view_nota_maior);
+        textViewNotaMenor = findViewById(R.id.text_view_nota_menor);
         textViewMedia = findViewById(R.id.text_view_media);
+        textViewStatus = findViewById(R.id.text_view_status);
+
         textViewStatus.setText("");
+        textViewNotaMaior.setText("");
+        textViewNotaMenor.setText("");
         textViewMedia.setText("Calcule a sua Média");
     }
 
@@ -63,21 +71,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void chamaInfo(){
+    public void chamaInfo(View v){
         Intent intent = new Intent(this, InfoActivity.class);
 
         double n1 = Double.parseDouble(editTextNota1.getText().toString());
         double n2 = Double.parseDouble(editTextNota2.getText().toString());
         double n3 = Double.parseDouble(editTextNota3.getText().toString());
 
-
-
-        if(n1 > n2){
-            intent.putExtra("Sua maior nota é: ", "n1");
+        if(n1 > n2 && n1 > n3){
+            textViewNotaMenor.setText("Nota mais baixa: " + n1);
+        }
+        else if (n2 > n3){
+            textViewNotaMenor.setText("Nota mais baixa:" + n2);
         }
 
-
-
+        if(n1 < n2 && n1 < n3){
+            textViewNotaMaior.setText("Nota mais alta: " + n1);
+        }
+        else if (n2 < n3){
+            textViewNotaMaior.setText("Nota mais alta: " + n2);
+        }
 
         startActivity(intent);
 

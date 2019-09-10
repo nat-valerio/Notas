@@ -8,5 +8,6 @@
     <string name="btn_calcular">Calcular</string>
     <string name="btn_informacao">Informações</string>
     <string name="resultado">Resultado</string>
+    <string name="digite_nota">Digite a sua nota...</string>
 
 </resources>
