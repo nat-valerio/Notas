@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextNota1;
     private EditText editTextNota2;
     private EditText editTextNota3;
+
     private TextView textViewNotaMaior;
     private TextView textViewNotaMenor;
     private TextView textViewMedia;
@@ -83,12 +84,18 @@ public class MainActivity extends AppCompatActivity {
         else if (n2 > n3){
             textViewNotaMaior.setText("Nota mais alta:" + n2);
         }
+        else if (n3 > n1 && n3 > n2){
+            textViewNotaMaior.setText("Nota mais alta:" + n3);
+        }
 
         if (n1 < n2 && n1 < n3){
             textViewNotaMenor.setText("Nota mais baixa: " + n1);
         }
         else if (n2 < n3){
             textViewNotaMenor.setText("Nota mais baixa: " + n2);
+        }
+        else if (n3 < n1 && n3 < n2){
+            textViewNotaMenor.setText("Nota mais baixa:" + n3);
         }
 
     }
