@@ -98,5 +98,15 @@ public class MainActivity extends AppCompatActivity {
             textViewNotaMenor.setText("Nota mais baixa:" + n3);
         }
 
+        if (n1 == n2 && n1 == n3){
+            textViewNotaMaior.setText("Nota mais alta: " + n1);
+        }
+        else if (n2 == n1 && n2 == n3){
+            textViewNotaMaior.setText("Nota mais alta: " + n2);
+        }
+        else if (n3 == n1 && n3 == n2){
+            textViewNotaMaior.setText("Nota mais alta: " + n3);
+        }
+
     }
 }
